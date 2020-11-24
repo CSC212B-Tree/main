@@ -3,15 +3,20 @@
 class BTreeNode
 {
     private:
-        int *keys;
+        int *keys;          // This might be needed to change into an array, so each node as an array of nodes
         int numKeys;
         int m;
+        BTreeNode* right;
+        BTreeNode* left;
+                            //Include a line that takes into consideration the children between left and right most childs
+
+
         bool leaf;
         BTreeNode **C;
 
     public:
         BTreeNode();        //Constructor
-        //BTreeNode(parameter) Dont know the parameter yet
+                            //BTreeNode(parameter) Dont know the parameter yet
         ~BTreeNode();       //Deconstructor
 
     friend class BTree;
