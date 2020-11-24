@@ -3,41 +3,46 @@
 
 class BTreeNode
 {
-private:
-    int *keys;
-    int numKeys;
-    int m;
-    bool leaf;
-    BTreeNode **C;
 
-public:
-    BTreeNode(int _t, bool _leaf);
+    private:
 
-    void traverse();
+        int *keys;
+        int numKeys;
+        int m;
+        bool leaf;
+        BTreeNode **C;
 
-    BTreeNode *search(int k);
+    public:
 
-    friend class BTree;
+        BTreeNode(int _t, bool _leaf);
+
+        void traverse();
+
+        BTreeNode *search(int k);
+
+        friend class BTree;
 };
 
 
 class BTree
 {
-private:
-    BTreeNode *root;
-    int m;
-public:
 
-    BTree(int _m)
-    {  root = NULL;  m = _m; }
+    private:
 
+        BTreeNode *root;
+        int m;
+    public:
 
-    void traverse()
-    {  if (root != NULL) root->traverse(); }
+        BTree(int _m)
+        {  root = NULL;  m = _m; }
 
 
-    BTreeNode* search(int key)
-    {  return (root == NULL)? NULL : root->search(key); }
+        void traverse()
+        {  if (root != NULL) root->traverse(); }
+
+
+        BTreeNode* search(int key)
+        {  return (root == NULL)? NULL : root->search(key); }
 };
 
 
