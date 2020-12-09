@@ -54,6 +54,6 @@ BTreeNode::BTreeNode(int _t, bool _leaf)
 
     keys = new int[2*m-1];
     C = new BTreeNode *[2*m];
-
+ 
     numKeys = 0;
 }
