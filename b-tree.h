@@ -32,7 +32,7 @@ class BTree
         BTree();        //Constructor, I dont believe we need a param constructor
         ~BTree();       //Deconstructor
 
-        int Search(char a) 
+        int Search(char a);
         void insert(char a);
         //Insert Function
 
