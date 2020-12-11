@@ -6,7 +6,8 @@ BTreeNode::BTreeNode(){
     this->right = nullptr
                 //set other middle children to null
 }
-
+int BTree::Search(std::string a);
+void BTree::insert(std::string a);
 BTreeNode::~BTreeNode(){
                 //I dont believe anything is needed here as of right now -John
 }
