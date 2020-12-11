@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <string>
 class BTreeNode
 {
     private:
@@ -32,8 +32,8 @@ class BTree
         BTree();        //Constructor, I dont believe we need a param constructor
         ~BTree();       //Deconstructor
 
-        int Search(char a);
-        void insert(char a);
+        int Search(std::string a);
+        void insert(std::string a);
         //Insert Function
 
          BTree(int _m)
